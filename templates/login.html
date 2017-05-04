@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+      <form method="post" action="/login">
+          <table>
+                <tr>
+                  <td><label>UserName</label></td>
+                  <td>
+                      <input type="text" name="username" value="{{username}}">
+                  </td>
+                </tr>
+                <tr>
+                  <td><label> Password</label></td>
+                  <td>
+                      <input type="password" name="password">
+                  </td>
+                </tr>
+
+        </table>
+        <div class="error">{{error}}</div>
+          <input type="submit">
+      </form>
+      <p>Don't have an account? <a href="/signup">Create one!</a></p>
+{% endblock %}
+
+
+
+     <!--{% for p in posts %}
+        <div class="entry">
+            <div class="p.subject">{{p.subject}}</div>
+            <pre class="p.content">{{p.content}}</pre>
+        </div>
+      {% endfor %}-->
+
+<!--  </body>
+</html> -->
